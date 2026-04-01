@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2023-09-06T15:37:14+01:00"
+    FORMAT="3.0" VERSION="3.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv3.0.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds"/>
+    <TIME_ORDER/>
+    <TIER LINGUISTIC_TYPE_REF="CLP main" TIER_ID="CLP handshape"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP congruence"
+        PARENT_REF="CLP handshape" TIER_ID="CLP congruence"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP event" PARENT_REF="CLP handshape" TIER_ID="CLP event"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP interaction"
+        PARENT_REF="CLP handshape" TIER_ID="CLP interaction"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP discourse" PARENT_REF="CLP handshape" TIER_ID="CLP DS"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP no vocabulary"
+        PARENT_REF="CLP handshape" TIER_ID="CLP movement"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP no vocabulary"
+        PARENT_REF="CLP handshape" TIER_ID="CLP direction"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP scene" PARENT_REF="CLP handshape" TIER_ID="CLP scene"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP no vocabulary"
+        PARENT_REF="CLP handshape" TIER_ID="CLP mouthing"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP no vocabulary"
+        PARENT_REF="CLP handshape" TIER_ID="CLP meaning"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP no vocabulary"
+        PARENT_REF="CLP handshape" TIER_ID="CLP comments"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP second hand"
+        PARENT_REF="CLP handshape" TIER_ID="CLP second hand"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP manner" PARENT_REF="CLP handshape" TIER_ID="CLP manner"/>
+    <TIER LINGUISTIC_TYPE_REF="CLP controlled"
+        PARENT_REF="CLP handshape" TIER_ID="CLP controlled"/>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONTROLLED_VOCABULARY_REF="CLP handshape"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP main" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP congruence"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP congruence" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP event" GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="CLP event" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP yes-no"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP yes-no" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP perspective"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP Perspective" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP discourse"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP discourse" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="CLP no vocabulary" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP scene" GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="CLP scene" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP interaction"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP interaction" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP second hand"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP second hand" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP controlled"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP controlled" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="CLP manner"
+        GRAPHIC_REFERENCES="false" LINGUISTIC_TYPE_ID="CLP manner" TIME_ALIGNABLE="false"/>
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00130975-001"
+        LANG_ID="und" LANG_LABEL="undetermined (und)"/>
+    <CONSTRAINT
+        DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT
+        DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT
+        DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+    <CONTROLLED_VOCABULARY CV_ID="CLP scene">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_be1d709d-9158-4278-a220-620d2df5ceef">
+            <CVE_VALUE LANG_REF="und">1a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_321f1558-378f-4de9-b949-d87b9131a5ac">
+            <CVE_VALUE LANG_REF="und">1b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_8e8c4d4c-ffa8-4e06-81e6-8240b103c569">
+            <CVE_VALUE LANG_REF="und">1c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_e1ff434f-9c0c-480e-8ef4-b664f9e6fdf0">
+            <CVE_VALUE LANG_REF="und">2a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_93cc11dd-697c-427c-bf64-751ca35d246e">
+            <CVE_VALUE LANG_REF="und">2b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7c5afaec-4268-4d9e-8d30-1de6eefc7c7d">
+            <CVE_VALUE LANG_REF="und">2c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_39e9bfc3-44f6-4199-a232-0416ceb740df">
+            <CVE_VALUE LANG_REF="und">2d</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fd1aaf8e-742d-478a-a226-1c1ccfea73fe">
+            <CVE_VALUE LANG_REF="und">3a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_ed4c35ec-ddba-42e7-9b56-7d31170b9a87">
+            <CVE_VALUE LANG_REF="und">3b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_3761e60a-1eba-4f86-8e24-7d5f2c792db6">
+            <CVE_VALUE LANG_REF="und">3c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7edd40c2-2452-42bd-92e7-301b08e75e6d">
+            <CVE_VALUE LANG_REF="und">3e</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f9f06e9d-4ae8-4c3b-9d31-18b94bdad56f">
+            <CVE_VALUE LANG_REF="und">3d</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_de126293-b940-42c1-8705-9cc18902e3f1">
+            <CVE_VALUE LANG_REF="und">4a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_5bf1f225-5403-45b4-b41b-1dc2b187922a">
+            <CVE_VALUE LANG_REF="und">4b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_6600f139-66c7-4c6c-9595-295105d3cb63">
+            <CVE_VALUE LANG_REF="und">4c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_a9133895-aa5d-4106-b42d-98b3bf3fd886">
+            <CVE_VALUE LANG_REF="und">4d</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_873a5f25-86ad-487a-ad4b-ca6350c5f044">
+            <CVE_VALUE LANG_REF="und">4e</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7f231c22-0908-4ec6-b260-b611844698e9">
+            <CVE_VALUE LANG_REF="und">4f</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_ef9da442-509a-460d-88ff-6b36b926ce4d">
+            <CVE_VALUE LANG_REF="und">4g</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_e61652ee-b99e-4d53-b082-9806512aa208">
+            <CVE_VALUE LANG_REF="und">4h</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_47ce8187-f9b5-43c7-a0e5-0c126c2eeb15">
+            <CVE_VALUE LANG_REF="und">5a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_18651ce0-a220-400d-b52f-2a8adcc48fd9">
+            <CVE_VALUE LANG_REF="und">5b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_3b2c0570-7fa6-416f-b141-e305e11d78a4">
+            <CVE_VALUE LANG_REF="und">5c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_bf864458-792a-46c8-bbbb-889102272e6e">
+            <CVE_VALUE LANG_REF="und">6a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_53eaa7da-d120-4632-a55e-84d8c95f103d">
+            <CVE_VALUE LANG_REF="und">6b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_cc3398df-9057-43f8-9f75-8662a460e2b4">
+            <CVE_VALUE LANG_REF="und">6c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_d7672278-64d4-46ad-95fc-c76f1c73c3ca">
+            <CVE_VALUE LANG_REF="und">6d</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_cefbec3d-3a13-4d46-a896-7c025f1ee0eb">
+            <CVE_VALUE LANG_REF="und">7a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_8921c2ed-df84-4123-ac18-43ac4750d2e0">
+            <CVE_VALUE LANG_REF="und">7b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_b2bdc319-9b8c-4e57-9a09-fc7e526773df">
+            <CVE_VALUE LANG_REF="und">7c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_61a01ca3-875e-4045-beff-bb04e5ac03e1">
+            <CVE_VALUE LANG_REF="und">8a</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_e4e532d2-4c8e-4b62-946b-31a1355385fd">
+            <CVE_VALUE LANG_REF="und">8b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_2f9451a0-b807-4ac1-87f9-6ac2e7739899">
+            <CVE_VALUE LANG_REF="und">8c</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_e93b802d-a455-4813-9999-73a4ce3081e0">
+            <CVE_VALUE LANG_REF="und">8d</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_af26906f-d80f-4675-9664-cbea81852f00">
+            <CVE_VALUE LANG_REF="und">8e</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_1c160ef7-fd74-415c-a450-ed6ae71b3e68">
+            <CVE_VALUE LANG_REF="und">other</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP second hand">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_dbe88efc-a815-4eff-b029-3aa71e38b872">
+            <CVE_VALUE LANG_REF="und">human</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_c8f0893f-3694-44ad-875a-0436072691c7">
+            <CVE_VALUE LANG_REF="und">animate</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_ab23bea1-0903-40d7-9c3a-2f70c98272aa">
+            <CVE_VALUE LANG_REF="und">inanimate</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7fee9ddb-ca11-4147-9b49-815744361c94">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP perspective">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_ebee42aa-c073-4e91-9bba-cc1c3dc746e5">
+            <CVE_VALUE LANG_REF="und">character</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_dd232b73-f76e-45ab-b8a1-1af1a84c567e">
+            <CVE_VALUE LANG_REF="und">observer</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_a19c0d1d-b9c4-4567-aea9-0d339cd43ea4">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_3e8def1f-cf3a-435b-9f9c-28bef95a3fe2">
+            <CVE_VALUE LANG_REF="und">both</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP discourse">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_ef1eb922-1c49-44a7-b389-b886ced47d15">
+            <CVE_VALUE LANG_REF="und">introduced</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_9f78ab1b-9693-49c6-ad11-d2198aa5aab2">
+            <CVE_VALUE LANG_REF="und">reintroduced</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_9ab5414c-a1f3-4d0b-8ae3-9e6f2c24517a">
+            <CVE_VALUE LANG_REF="und">maintained</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f97f9995-573f-4a73-a87c-313abfb28889">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP congruence">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_877efe67-0404-4380-8a2f-5b98d69bf413">
+            <CVE_VALUE LANG_REF="und">congruent</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7ae37cbe-0a5f-49aa-989c-1b5601b8f2f9">
+            <CVE_VALUE LANG_REF="und">depictive</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_fc4016b7-43a6-45a4-a0f3-e0adf8aca374">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP event">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_a6510fb9-a68a-4409-adec-e7f134d85165">
+            <CVE_VALUE LANG_REF="und">location</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_a0fa8a87-ee5c-4b68-8508-4af00fc221ea">
+            <CVE_VALUE LANG_REF="und">motion</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_b2de6f1b-71a9-4dc2-a025-4cdd83a7a790">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP yes-no">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_23cb5fc0-a322-4895-b270-cb6f29fbda51">
+            <CVE_VALUE LANG_REF="und">yes</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_4b42cc41-522f-41ac-8094-1526cbad5b7a">
+            <CVE_VALUE LANG_REF="und">no</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_cb1629ff-1e6e-402d-aae9-86ed58844640">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP handshape">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_922e75be-d8b0-48ea-a21a-a2b96d24200a">
+            <CVE_VALUE LANG_REF="und">1</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_26338051-124d-4c29-9927-2082fb1e4c6c">
+            <CVE_VALUE LANG_REF="und">2</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_c30fa031-f75f-42bc-98b2-54656758a8ed">
+            <CVE_VALUE LANG_REF="und">N</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_a7f272de-8f0e-4071-b44c-c35a4d495ce9">
+            <CVE_VALUE LANG_REF="und">1b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_68bfbcb1-e615-496e-871b-d234c3efc49b">
+            <CVE_VALUE LANG_REF="und">2b</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_4c32619b-7988-4598-8b51-fa112ac29b51">
+            <CVE_VALUE LANG_REF="und">Nb</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_0054a217-9fa6-443f-aba2-7a9319095403">
+            <CVE_VALUE LANG_REF="und">1t</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_2e2cba59-7a07-4a5b-b563-76021c79ca60">
+            <CVE_VALUE LANG_REF="und">2t</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_3ae52401-9a4d-4e44-8193-d6f534a7a130">
+            <CVE_VALUE LANG_REF="und">Nt</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_6cf5b6f3-3829-48b0-9ad2-86557033b4d5">
+            <CVE_VALUE LANG_REF="und">1m</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f6e7cae2-4dc6-4cd3-950e-2b1ec8076b5b">
+            <CVE_VALUE LANG_REF="und">2m</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_22d1ec80-f808-4d59-8b2e-4b322d59560a">
+            <CVE_VALUE LANG_REF="und">Nm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_78defb58-dc02-4433-bfb7-691f35c37745">
+            <CVE_VALUE LANG_REF="und">1bm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_87ec7931-0218-49e2-96a7-8cfdee34d9c1">
+            <CVE_VALUE LANG_REF="und">2bm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_6c0eac39-b2f0-47a2-8713-b7d99546c040">
+            <CVE_VALUE LANG_REF="und">Nbm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_d48bccf9-afd5-4bac-81b3-77c66c1e68cd">
+            <CVE_VALUE LANG_REF="und">1tm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_78d521f7-9d57-4bd1-8b4d-b023918de90d">
+            <CVE_VALUE LANG_REF="und">2tm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_d2d071d9-5756-43be-a8eb-a337678799ea">
+            <CVE_VALUE LANG_REF="und">Ntm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_6a54776d-6488-4ce1-9c5b-7e50da7cb2f8">
+            <CVE_VALUE LANG_REF="und">1bt</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_da994f0f-3e9e-4b53-bb6c-461ad8275f10">
+            <CVE_VALUE LANG_REF="und">2bt</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_a1a2044f-682d-41ca-b8ca-9ad5137ce7c9">
+            <CVE_VALUE LANG_REF="und">Nbt</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f9ea6443-8d01-4694-b62a-ea68a2937e4d">
+            <CVE_VALUE LANG_REF="und">1btm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_2e13bb81-63a4-41d3-bf24-d7cb370b3e0b">
+            <CVE_VALUE LANG_REF="und">2btm</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_2b457901-d9c3-4ceb-b569-3fa95e7469a8">
+            <CVE_VALUE LANG_REF="und">Nbtm</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP interaction">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_24c4f5fa-4916-4583-b895-a599c55a94f6">
+            <CVE_VALUE LANG_REF="und">yes(body)</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_2c89761e-ff4d-43aa-9e36-15890bca0f8b">
+            <CVE_VALUE LANG_REF="und">yes(hand)</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_be9c49a9-c02b-43e8-97c9-b6005e3c6b15">
+            <CVE_VALUE LANG_REF="und">no</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_184e3189-9954-41c9-82fd-6a1d4632f298">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP controlled">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_4c79acbc-3d6b-42f7-99ad-c5e95dafc2ba">
+            <CVE_VALUE LANG_REF="und">controlled</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7638b00a-2a06-4406-9fd4-b904a03323cf">
+            <CVE_VALUE LANG_REF="und">uncontrolled</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_7695c64f-018e-4542-8986-ba1356b84710">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="CLP manner">
+        <DESCRIPTION LANG_REF="und"/>
+        <CV_ENTRY_ML CVE_ID="cveid_cfd8e3ac-929c-47e6-9f20-722c75f3a7b0">
+            <CVE_VALUE LANG_REF="und">manner</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_c6a5d169-0a8e-4f26-80b5-1f563103e3e0">
+            <CVE_VALUE LANG_REF="und">path</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_72c10746-5829-4782-99e9-133ff9f9bcd4">
+            <CVE_VALUE LANG_REF="und">both</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_60fde1c9-7489-461b-b251-e6ad3e81dc0b">
+            <CVE_VALUE LANG_REF="und">unclear</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+</ANNOTATION_DOCUMENT>

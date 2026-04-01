@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ANNOTATION_DOCUMENT AUTHOR="" DATE="2026-03-22T19:49:37+01:00"
+    FORMAT="3.0" VERSION="3.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv3.0.xsd">
+    <HEADER MEDIA_FILE="" TIME_UNITS="milliseconds">
+        <MEDIA_DESCRIPTOR
+            MEDIA_URL="file:///Users/user01/video_01.mp4"
+            MIME_TYPE="video/mp4" RELATIVE_MEDIA_URL="./video_01.mp4"/>
+        <MEDIA_DESCRIPTOR
+            MEDIA_URL="file:///Users/user01/video_02.mp4"
+            MIME_TYPE="video/mp4" RELATIVE_MEDIA_URL="./video_02.mp4"/>
+        <MEDIA_DESCRIPTOR
+            MEDIA_URL="file:///Users/user01/audio_02.mp3"
+            MIME_TYPE="audio/*" RELATIVE_MEDIA_URL="./audio_02.mp3"/>
+        <PROPERTY NAME="URN">urn:nl-mpi-tools-elan-eaf:74eba853-14bc-4878-a47d-dc2aae826b81</PROPERTY>
+        <PROPERTY NAME="lastUsedAnnotationId">9</PROPERTY>
+    </HEADER>
+    <TIME_ORDER>
+        <TIME_SLOT TIME_SLOT_ID="ts1" TIME_VALUE="490"/>
+        <TIME_SLOT TIME_SLOT_ID="ts2" TIME_VALUE="1590"/>
+        <TIME_SLOT TIME_SLOT_ID="ts3" TIME_VALUE="2010"/>
+        <TIME_SLOT TIME_SLOT_ID="ts4" TIME_VALUE="3670"/>
+        <TIME_SLOT TIME_SLOT_ID="ts5" TIME_VALUE="4370"/>
+        <TIME_SLOT TIME_SLOT_ID="ts6" TIME_VALUE="5980"/>
+    </TIME_ORDER>
+    <TIER ANNOTATOR="ABC" LINGUISTIC_TYPE_REF="default-lt"
+        PARTICIPANT="s001" TIER_ID="words">
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a1"
+                TIME_SLOT_REF1="ts1" TIME_SLOT_REF2="ts2">
+                <ANNOTATION_VALUE>I</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a2"
+                TIME_SLOT_REF1="ts3" TIME_SLOT_REF2="ts4">
+                <ANNOTATION_VALUE>like</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <ALIGNABLE_ANNOTATION ANNOTATION_ID="a3"
+                TIME_SLOT_REF1="ts5" TIME_SLOT_REF2="ts6">
+                <ANNOTATION_VALUE>cats</ANNOTATION_VALUE>
+            </ALIGNABLE_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER ANNOTATOR="DEF" LANG_REF="eng" LINGUISTIC_TYPE_REF="pos"
+        PARENT_REF="words" PARTICIPANT="s001" TIER_ID="pos">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a4" ANNOTATION_REF="a1" CVE_REF="cveid_89b2ac38-7313-4737-aa5f-19e1231ccb18">
+                <ANNOTATION_VALUE>pronoun</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a5" ANNOTATION_REF="a2" CVE_REF="cveid_d5558ab7-11c3-47d5-9a0f-403724b0e0b7">
+                <ANNOTATION_VALUE>verb</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a6" ANNOTATION_REF="a3" CVE_REF="cveid_f2eec815-c427-4b61-84eb-cd1e1601c9b4">
+                <ANNOTATION_VALUE>noun</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <TIER ANNOTATOR="GHI" LANG_REF="eng" LINGUISTIC_TYPE_REF="syntax"
+        PARENT_REF="words" PARTICIPANT="s001" TIER_ID="syntax">
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a7" ANNOTATION_REF="a1" CVE_REF="cveid_4990ed36-c1d1-40c6-800e-2bd264d9a89b">
+                <ANNOTATION_VALUE>subject</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a8" ANNOTATION_REF="a2" CVE_REF="cveid_de8c8f23-6b49-42da-9bd4-5b8b59d8b1da">
+                <ANNOTATION_VALUE>predicate</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+        <ANNOTATION>
+            <REF_ANNOTATION ANNOTATION_ID="a9" ANNOTATION_REF="a3" CVE_REF="cveid_f37323ed-9b7e-48d9-bbd6-b9105186ed02">
+                <ANNOTATION_VALUE>object</ANNOTATION_VALUE>
+            </REF_ANNOTATION>
+        </ANNOTATION>
+    </TIER>
+    <LINGUISTIC_TYPE GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="default-lt" TIME_ALIGNABLE="true"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="pos" GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="pos" TIME_ALIGNABLE="false"/>
+    <LINGUISTIC_TYPE CONSTRAINTS="Symbolic_Association"
+        CONTROLLED_VOCABULARY_REF="syntax" GRAPHIC_REFERENCES="false"
+        LINGUISTIC_TYPE_ID="syntax" TIME_ALIGNABLE="false"/>
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00138509-001"
+        LANG_ID="fin" LANG_LABEL="Finnish (fin)"/>
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00138502-001"
+        LANG_ID="eng" LANG_LABEL="English (eng)"/>
+    <CONSTRAINT
+        DESCRIPTION="Time subdivision of parent annotation's time interval, no time gaps allowed within this interval" STEREOTYPE="Time_Subdivision"/>
+    <CONSTRAINT
+        DESCRIPTION="Symbolic subdivision of a parent annotation. Annotations refering to the same parent are ordered" STEREOTYPE="Symbolic_Subdivision"/>
+    <CONSTRAINT DESCRIPTION="1-1 association with a parent annotation" STEREOTYPE="Symbolic_Association"/>
+    <CONSTRAINT
+        DESCRIPTION="Time alignable annotations within the parent annotation's time interval, gaps are allowed" STEREOTYPE="Included_In"/>
+    <CONTROLLED_VOCABULARY CV_ID="pos">
+        <DESCRIPTION LANG_REF="eng">Part of speech</DESCRIPTION>
+        <DESCRIPTION LANG_REF="fin"/>
+        <CV_ENTRY_ML CVE_ID="cveid_89b2ac38-7313-4737-aa5f-19e1231ccb18">
+            <CVE_VALUE DESCRIPTION="a pronoun" LANG_REF="eng">pronoun</CVE_VALUE>
+            <CVE_VALUE LANG_REF="fin">pronomini</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_d5558ab7-11c3-47d5-9a0f-403724b0e0b7">
+            <CVE_VALUE DESCRIPTION="a verb" LANG_REF="eng">verb</CVE_VALUE>
+            <CVE_VALUE LANG_REF="fin">verbi</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f2eec815-c427-4b61-84eb-cd1e1601c9b4">
+            <CVE_VALUE DESCRIPTION="a noun" LANG_REF="eng">noun</CVE_VALUE>
+            <CVE_VALUE LANG_REF="fin">substantiivi</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+    <CONTROLLED_VOCABULARY CV_ID="syntax" EXT_REF="er1"/>
+    <EXTERNAL_REF EXT_REF_ID="er1" TYPE="ecv" VALUE="./inst/extdata/syntax.ecv"/>
+</ANNOTATION_DOCUMENT>

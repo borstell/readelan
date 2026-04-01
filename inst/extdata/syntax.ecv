@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CV_RESOURCE AUTHOR="" DATE="2026-03-22T19:21:33+01:00" VERSION="0.2"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/EAFv2.8.xsd">
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00138509-001"
+        LANG_ID="fin" LANG_LABEL="Finnish (fin)"/>
+    <LANGUAGE LANG_DEF="http://cdb.iso.org/lg/CDB-00138502-001"
+        LANG_ID="eng" LANG_LABEL="English (eng)"/>
+    <CONTROLLED_VOCABULARY CV_ID="syntax">
+        <DESCRIPTION LANG_REF="eng"/>
+        <DESCRIPTION LANG_REF="fin"/>
+        <CV_ENTRY_ML CVE_ID="cveid_4990ed36-c1d1-40c6-800e-2bd264d9a89b">
+            <CVE_VALUE DESCRIPTION="" LANG_REF="eng">subject</CVE_VALUE>
+            <CVE_VALUE DESCRIPTION="" LANG_REF="fin">subjekti</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_de8c8f23-6b49-42da-9bd4-5b8b59d8b1da">
+            <CVE_VALUE DESCRIPTION="" LANG_REF="eng">predicate</CVE_VALUE>
+            <CVE_VALUE DESCRIPTION="" LANG_REF="fin">predikaatti</CVE_VALUE>
+        </CV_ENTRY_ML>
+        <CV_ENTRY_ML CVE_ID="cveid_f37323ed-9b7e-48d9-bbd6-b9105186ed02">
+            <CVE_VALUE DESCRIPTION="" LANG_REF="eng">object</CVE_VALUE>
+            <CVE_VALUE DESCRIPTION="" LANG_REF="fin">objekti</CVE_VALUE>
+        </CV_ENTRY_ML>
+    </CONTROLLED_VOCABULARY>
+</CV_RESOURCE>
