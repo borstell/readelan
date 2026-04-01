@@ -173,6 +173,8 @@ read_eaf <- function(file,
                # Return all annotations as a data frame
                all_annotations
 
+             } else {
+                 data.frame()
                }
 
              }

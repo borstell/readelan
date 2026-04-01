@@ -301,14 +301,14 @@ microbenchmark::microbenchmark(
   times = 100
 )
 #> Unit: milliseconds
-#>                                expr       min        lq      mean    median
-#>        readelan::read_eaf(eaf_file)  3.572641  3.803362  5.558926  4.149311
-#>  phonfieldwork::eaf_to_df(eaf_file) 12.598142 13.361826 21.668942 14.245223
-#>           act::import_eaf(eaf_file) 60.729499 65.465296 76.269505 67.245849
-#>         uq      max neval cld
-#>   5.139333  66.2132   100 a  
-#>  17.350330 560.7476   100  b 
-#>  78.032028 207.7851   100   c
+#>                                expr      min        lq      mean    median
+#>        readelan::read_eaf(eaf_file)  3.54554  3.752337  4.467007  3.916893
+#>  phonfieldwork::eaf_to_df(eaf_file) 12.21567 13.002686 17.925177 13.628694
+#>           act::import_eaf(eaf_file) 59.55592 63.103674 66.648167 63.936351
+#>         uq       max neval cld
+#>   4.522892  11.86703   100 a  
+#>  15.973282 376.29846   100  b 
+#>  65.180649 142.63887   100   c
 ```
 
 Additionally, since `{readelan}`’s `read_eaf()` function can inherently

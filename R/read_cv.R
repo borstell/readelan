@@ -145,6 +145,8 @@ read_cv <- function(file,
              # Check that length is not zero
              if (length(cvs) > 0) {
                cvs
+             } else {
+                 data.frame()
                }
 
              }

@@ -118,6 +118,8 @@ read_tiers <- function(file,
                      by.x = c("filename", "tier_type"),
                      by.y = c("filename", "tier_type"),
                      sort = FALSE)
+             } else {
+               data.frame()
              }
 
            }
