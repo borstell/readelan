@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `{readelan}` is to access the data (i.e., annotations) and
@@ -25,6 +26,12 @@ You can install the development version of `{readelan}` like so:
 
 ``` r
 pak::pak("borstell/readelan")
+```
+
+You can also get the official release version from CRAN:
+
+``` r
+install.packages("readelan")
 ```
 
 ## Basic use
@@ -275,8 +282,8 @@ of the progress.
 
 There are other packages that also contain functions to read ELAN
 annotation files, e.g.,
-[`{act}`](https://cran.r-project.org/web/packages/act/index.html) and
-[`{phonfieldwork}`](https://cran.r-project.org/web/packages/phonfieldwork/index.html).
+[`{act}`](https://cran.r-project.org/package=act) and
+[`{phonfieldwork}`](https://cran.r-project.org/package=phonfieldwork).
 However, the goal of `{readelan}` is to be a lightweight package
 dedicated to ELAN files (including `.etf` and `.ecv` files), and which
 is also fast. Benchmarking against these other packages indicate that
@@ -295,13 +302,13 @@ microbenchmark::microbenchmark(
 )
 #> Unit: milliseconds
 #>                                expr       min        lq      mean    median
-#>        readelan::read_eaf(eaf_file)  3.617523  3.848203  4.241762  3.985319
-#>  phonfieldwork::eaf_to_df(eaf_file) 12.541809 13.157023 18.403416 13.568105
-#>           act::import_eaf(eaf_file) 58.534109 62.948213 66.159445 64.324103
-#>        uq        max neval cld
-#>   4.32884   9.793433   100 a  
-#>  14.91650 396.999970   100  b 
-#>  65.67035 144.607409   100   c
+#>        readelan::read_eaf(eaf_file)  3.572641  3.803362  5.558926  4.149311
+#>  phonfieldwork::eaf_to_df(eaf_file) 12.598142 13.361826 21.668942 14.245223
+#>           act::import_eaf(eaf_file) 60.729499 65.465296 76.269505 67.245849
+#>         uq      max neval cld
+#>   5.139333  66.2132   100 a  
+#>  17.350330 560.7476   100  b 
+#>  78.032028 207.7851   100   c
 ```
 
 Additionally, since `{readelan}`’s `read_eaf()` function can inherently

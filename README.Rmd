@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # readelan <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of `{readelan}` is to access the data (i.e., annotations) and metadata (e.g., tier types/structure, linked media and controlled vocabularies) in [ELAN](https://archive.mpi.nl/tla/elan) annotation files (`.eaf`), template files (`.etf`) and external controlled vocabulary files (`.ecv`) directly in R.
@@ -28,6 +29,12 @@ You can install the development version of `{readelan}` like so:
 
 ``` r
 pak::pak("borstell/readelan")
+```
+
+You can also get the official release version from CRAN:
+
+``` r
+install.packages("readelan")
 ```
 
 ## Basic use
@@ -140,7 +147,7 @@ When iterating over a large number of files, setting the `progress` argument to 
 
 ## Similar packages
 
-There are other packages that also contain functions to read ELAN annotation files, e.g., [`{act}`](https://cran.r-project.org/web/packages/act/index.html) and [`{phonfieldwork}`](https://cran.r-project.org/web/packages/phonfieldwork/index.html). However, the goal of `{readelan}` is to be a lightweight package dedicated to ELAN files (including `.etf` and `.ecv` files), and which is also fast. Benchmarking against these other packages indicate that `{readelan}` is fast option.
+There are other packages that also contain functions to read ELAN annotation files, e.g., [`{act}`](https://cran.r-project.org/package=act) and [`{phonfieldwork}`](https://cran.r-project.org/package=phonfieldwork). However, the goal of `{readelan}` is to be a lightweight package dedicated to ELAN files (including `.etf` and `.ecv` files), and which is also fast. Benchmarking against these other packages indicate that `{readelan}` is fast option.
 
 ```{r}
 eaf_file <- system.file("extdata", 
