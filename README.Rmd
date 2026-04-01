@@ -18,10 +18,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `{readelan}` is to access the data centered around the 
-annotations and metadata (e.g., media and controlled vocabularies) 
-from [ELAN](https://archive.mpi.nl/tla/elan) annotation files (`.eaf`),
-template files (`.etf`) and external controlled vocabulary files (`.ecv`).
+The goal of `{readelan}` is to access the data (i.e., annotations) and metadata (e.g., tier types/structure, linked media and controlled vocabularies) in [ELAN](https://archive.mpi.nl/tla/elan) annotation files (`.eaf`), template files (`.etf`) and external controlled vocabulary files (`.ecv`) directly in R.
+
+The `{readelan}` package is a fast yet lightweight package with only one dependency outside of core packages, namely [`{xml2}`](https://xml2.r-lib.org). The `{xml2}` package is central to access the inner structure of ELAN files, which are all fundamentally XML files.
 
 ## Installation
 
@@ -31,12 +30,129 @@ You can install the development version of `{readelan}` like so:
 pak::pak("borstell/readelan")
 ```
 
-## Example
+## Basic use
 
-This is a basic example which shows you how to solve a common problem:
+### Reading annotations
 
-```{r example}
-#library(readelan)
-## basic example code
+The most obvious use of `{readelan}` is to be able to read annotations directly from an `.eaf` file:
+
+```{r}
+library(readelan)
+
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+read_eaf(eaf_file)
 ```
 
+The `tiers` and `xpath` arguments in `read_eaf()` allow the user to specify tiers of interest already on reading the files, which simplifies and speeds up the process in cases where there are many tiers but only some of which are necessary to import:
+
+
+```{r}
+library(readelan)
+
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+read_eaf(eaf_file, tiers = list(tier = "words"))
+```
+
+
+### Reading controlled vocabularies (CVs)
+Some ELAN files may contain [controlled vocabularies](https://www.mpi.nl/tools/elan/docs/manual/index.html#Sec_Controlled_Vocabularies.html), which are pre-defined sets of labels that can be used as annotation values. The function `read_cv()` can extract all CVs from a file -- whether a regular annotation file (`.eaf`), a template file (`.etf`) or an external CV file (`.ecv`):
+
+```{r}
+library(readelan)
+
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+dplyr::glimpse(read_cv(eaf_file))
+
+etf_file <- system.file("extdata", 
+                        "CLP_annotation_v2-2.etf", 
+                        package = "readelan")
+
+dplyr::glimpse(read_cv(etf_file))
+
+ecv_file <- system.file("extdata", 
+                        "syntax.ecv", 
+                        package = "readelan")
+
+dplyr::glimpse(read_cv(ecv_file))
+```
+
+### Reading tier metadata
+
+To access information about tiers in an annotation file (`.eaf`) or template file (`.etf`), the `read_tiers()` function can be used:
+
+```{r}
+library(readelan)
+
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+dplyr::glimpse(read_tiers(eaf_file))
+
+etf_file <- system.file("extdata", 
+                        "CLP_annotation_v2-2.etf", 
+                        package = "readelan")
+
+dplyr::glimpse(read_tiers(etf_file))
+```
+
+### Reading media metadata
+
+To access information about linked media file in an annotation file (`.eaf`), the `read_media()` function can be used:
+
+```{r}
+library(readelan)
+
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+read_media(eaf_file)
+```
+
+
+### Iterating over multiple files
+
+The `read_` functions all allow for either a single file or a vector of files to be used as `file` input. With multiple files, the function will iterate over them, and return a single data frame:
+
+```{r}
+library(readelan)
+
+eaf_file2 <- system.file("extdata", 
+                         "example_no_annotations.eaf", 
+                         package = "readelan")
+
+dplyr::glimpse(read_eaf(c(eaf_file, eaf_file2)))
+```
+
+**Note:** In this case, the resulting data frame is the same as in the first example, since the second `.eaf` file does not contain any annotations.
+
+When iterating over a large number of files, setting the `progress` argument to `TRUE` can be advisable, in order to get visual information of the progress.
+
+## Similar packages
+
+There are other packages that also contain functions to read ELAN annotation files, e.g., [`{act}`](https://cran.r-project.org/web/packages/act/index.html) and [`{phonfieldwork}`](https://cran.r-project.org/web/packages/phonfieldwork/index.html). However, the goal of `{readelan}` is to be a lightweight package dedicated to ELAN files (including `.etf` and `.ecv` files), and which is also fast. Benchmarking against these other packages indicate that `{readelan}` is fast option.
+
+```{r}
+eaf_file <- system.file("extdata", 
+                        "example.eaf", 
+                        package = "readelan")
+
+microbenchmark::microbenchmark(
+  readelan::read_eaf(eaf_file),
+  phonfieldwork::eaf_to_df(eaf_file),
+  act::import_eaf(eaf_file),
+  times = 100
+)
+```
+
+Additionally, since `{readelan}`'s `read_eaf()` function can inherently iterate over many files, and specify target tiers or tier types using the `tiers` or `xpath` arguments, it becomes much faster to read larger sets of annotation files for which only specific tiers are of interest to import.
