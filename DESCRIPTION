@@ -20,5 +20,5 @@ Imports:
     tools,
     utils,
     xml2
-URL: https://github.com/borstell/readelan
+URL: https://github.com/borstell/readelan, https://borstell.github.io/readelan/
 BugReports: https://github.com/borstell/readelan/issues

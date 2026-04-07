@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/readelan)](https://CRAN.R-project.org/package=readelan)
 [![R-CMD-check](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -22,16 +24,16 @@ XML files.
 
 ## Installation
 
-You can install the development version of `{readelan}` like so:
-
-``` r
-pak::pak("borstell/readelan")
-```
-
-You can also get the official release version from CRAN:
+You can download the official release version of `{readelan}` from CRAN:
 
 ``` r
 install.packages("readelan")
+```
+
+Alternatively, you can install the development version like so:
+
+``` r
+pak::pak("borstell/readelan")
 ```
 
 ## Basic use
@@ -301,14 +303,14 @@ microbenchmark::microbenchmark(
   times = 100
 )
 #> Unit: milliseconds
-#>                                expr      min        lq      mean    median
-#>        readelan::read_eaf(eaf_file)  3.54554  3.752337  4.467007  3.916893
-#>  phonfieldwork::eaf_to_df(eaf_file) 12.21567 13.002686 17.925177 13.628694
-#>           act::import_eaf(eaf_file) 59.55592 63.103674 66.648167 63.936351
-#>         uq       max neval cld
-#>   4.522892  11.86703   100 a  
-#>  15.973282 376.29846   100  b 
-#>  65.180649 142.63887   100   c
+#>                                expr       min        lq      mean    median
+#>        readelan::read_eaf(eaf_file)  3.618799  3.865444  4.408088  3.995882
+#>  phonfieldwork::eaf_to_df(eaf_file) 12.486772 13.317079 19.673537 14.361861
+#>           act::import_eaf(eaf_file) 57.919321 63.422488 76.427128 66.256699
+#>         uq        max neval cld
+#>   4.406987   8.940138   100  a 
+#>  16.249869 471.515270   100  a 
+#>  69.478613 800.792237   100   b
 ```
 
 Additionally, since `{readelan}`’s `read_eaf()` function can inherently

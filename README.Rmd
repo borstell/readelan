@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # readelan <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/readelan)](https://CRAN.R-project.org/package=readelan)
 [![R-CMD-check](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/borstell/readelan/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
@@ -25,17 +26,19 @@ The `{readelan}` package is a fast yet lightweight package with only one depende
 
 ## Installation
 
-You can install the development version of `{readelan}` like so:
+
+You can download the official release version of `{readelan}` from CRAN:
+
+``` r
+install.packages("readelan")
+```
+
+Alternatively, you can install the development version like so:
 
 ``` r
 pak::pak("borstell/readelan")
 ```
 
-You can also get the official release version from CRAN:
-
-``` r
-install.packages("readelan")
-```
 
 ## Basic use
 
